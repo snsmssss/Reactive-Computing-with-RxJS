@@ -1,0 +1,169 @@
+Reactive programming 
+Hours = 2 
+
+
+Tuesday,18.09.2023
+(11.15 am to 12.15 pm)
+&amp;
+Wednesday,19.09.2023
+(2.15 pm to 3.15 pm)
+
+https://www.youtube.com/watch?v=PhggNGsSQyg&t=342s
+
+
+Reactive Programming:
+
+The following is a good conceptual video
+
+Summary : https://www.youtube.com/watch?v=h7CozVrhFoQ&list=PLp50dWW_m40WID0zCrftuRCVa3mCaxYG6&index=1&t=337s
+What is a Data stream?
+example : group of people chatting
+	  events happening one after another over a time
+What is observable?
+View the following video, nicely explains aeverything
+RxJS is a core piece of Data dtream
+Ecomm shopping cart application, user places order
+before placing order - status is nothing
+Order will change over time
+This Order status needs to informed to people
+The dats is continuosly changing
+
+Continuous data strea is coming. This is observable
+Observable 
+
+What is sattelite data type?
+
+What is operators?
+
+What is data type?
+
+Observable
+
+Subscribers
+My app is dashboard
+Here I will come and update the status order
+Since we have subscribed to it
+
+
+Another simple example
+We are in Youtube channel on ARC tutorial
+The data is added every single day(video)
+Now think of thos as observable
+Data posted every single day
+You have subscribed to my channel
+You get notification
+This is observable & subscribers
+You are notified immediately. So there is change of data
+RxJS operators
+I have posted community message or video
+2 type - txt & video
+
+You rae like Operator, you open or don't open - you filter the data
+
+
+https://www.youtube.com/watch?v=h7CozVrhFoQ
+
+
+
+Reactive programming is a programming paradigm that emphasizes the propagation of data changes and the handling of asynchronous events. It is designed to handle streams of data and events in a responsive and non-blocking way. Reactive programming frameworks, such as RxJava (for Java) or RxJS (for JavaScript), provide abstractions and utilities to work with asynchronous data streams and enable developers to express complex event-driven applications in a more straightforward and maintainable manner.
+Data Streams: Reactive programming deals with data streams, which can be a sequence of events or a continuous flow of data.
+
+Asynchronous and Non-Blocking: It focuses on handling asynchronous events without blocking the application's execution.
+
+Event-Driven: Reactive programming is well-suited for event-driven applications and real-time data processing.
+
+Backpressure: Reactive systems can handle backpressure, a mechanism to control data flow in case a downstream component is slower than the upstream data source.
+
+COURSE DESCRIPTION:
+
+"The Rx in RxJS is ReactiveX. This is an API for asynchronous programming using observables. It's tremendously powerful and it offers a new way of structuring applications.
+
+The JS of course is JavaScript. RxJS is the JavaScript implementation of ReactiveX, and that's what this RxJS tutorial is all about. You're going to learn how to harness the power of ReactiveX while using JavaScript.
+
+We're going to start out by setting up a quick development environment from scratch, and then we'll work our way through all of the major ReactiveX topics in an example-based environment.
+
+My goal in this course is to help absolute beginners to ReactiveX and RxJS gain a solid understanding of the following:
+
+- Streams
+- Observables & Observers
+- Subscriptions
+- Subjects
+- Operators
+
+We're going to learn about all of these while actually working with code and observing the results in the browser, so that you can gain a practical understanding of ReactiveX and RxJS.
+
+//// Are there any requirements for this RxJS tutorial?
+
+- A basic understanding of JavaScript
+- A keen interest on leveling up your coding skills!"
+
+
+
+Explain observvables in the context of Reactive programming
+
+In the context of reactive programming, observables are a fundamental concept used to represent and manage asynchronous data streams. Reactive programming is a paradigm that focuses on reacting to changes and events in a more declarative and compositional way. It's widely used in scenarios where there's a need to handle asynchronous data, such as user input, network responses, sensor data, and more.
+
+Observables are a core building block of reactive programming libraries, such as RxJava, RxJS, and ReactiveX, which provide implementations for various programming languages. Observables can be thought of as sequences of values emitted over time. These values can represent data, events, or even errors.
+
+Here are some key concepts related to observables:
+
+Observable: An observable is a source of data that emits values over time. It's like a data stream that you can subscribe to. Observables can emit three types of items: values, errors, and completion signals.
+
+Subscription: When you subscribe to an observable, you're essentially saying that you want to be notified whenever the observable emits a new value, error, or completes. Subscriptions are a way to start receiving the emitted items.
+
+Emitter: The component that generates and emits values, events, or data changes over time is the emitter. Observables act as emitters that push data to their subscribers.
+
+Observer: An observer is the entity that subscribes to an observable to receive its emissions. The observer defines what actions to take when it receives new values, errors, or completion signals.
+
+Operators: Operators are methods or functions provided by reactive programming libraries that allow you to transform, filter, combine, and manipulate observables. Operators enable you to create complex data flows by chaining them together.
+
+Hot and Cold Observables: Hot observables start emitting items as soon as they're created, even if there are no subscribers. Cold observables, on the other hand, only start emitting when someone subscribes.
+
+Backpressure: Backpressure is a mechanism to handle situations where the observable is emitting data faster than the observer can process it. Reactive programming libraries provide solutions to deal with backpressure.
+
+Using observables, you can build asynchronous data processing pipelines in a more structured and declarative manner. This can lead to more maintainable and readable code, especially when dealing with complex asynchronous scenarios. Observables allow you to define how data flows and how it's transformed without explicitly managing low-level concurrency and callback complexities.
+
+Here's a simple example in JavaScript using RxJS:
+
+javascript
+Copy code
+import { Observable } from 'rxjs';
+
+const observable = new Observable(subscriber => {
+  subscriber.next('Hello');
+  subscriber.next('World');
+  subscriber.complete();
+});
+
+observable.subscribe({
+  next: value => console.log(value),
+  complete: () => console.log('Complete')
+});
+In this example, the observable emits two values ('Hello' and 'World') and then completes. The subscriber logs the received values and the completion message.
+
+
+
+can I say courier packet tracking application using AIrway Bill number is an example that would require Reactive programming 
+ChatGPT
+Yes, a courier packet tracking application that uses an Airway Bill (AWB) number could indeed benefit from reactive programming principles and concepts. Here's how reactive programming could be applied in this context:
+
+Real-time Tracking Updates: In a tracking application, customers expect real-time updates on the status and location of their courier packets. Reactive programming allows you to create observables that emit location updates, estimated delivery times, and other relevant information as they become available. Subscribers (users of the application) can then receive and display these updates in a more efficient and organized manner.
+
+Asynchronous Data Streams: Tracking data often comes from various sources like GPS devices, delivery trucks, and sorting facilities. Reactive programming allows you to handle these asynchronous data streams seamlessly. Observables can represent each data source, and you can use operators to merge, filter, and transform the streams before presenting them to users.
+
+User Interaction: When a user enters an AWB number to track a package, the application needs to respond to this input and start fetching relevant data. Reactive programming can be used to observe user inputs and initiate the appropriate data retrieval processes, making the application responsive and event-driven.
+
+Error Handling: Reactive programming libraries provide mechanisms to handle errors gracefully. For example, if there's an issue with fetching tracking data for a specific AWB number, the application can emit an error event through the observable stream. Subscribers can then be notified of the error and appropriate actions can be taken, such as showing an error message to the user.
+
+Caching and Optimization: Reactive programming libraries often provide caching mechanisms that can help reduce unnecessary requests to the server. Once tracking data is fetched, it can be cached and shared among different parts of the application that are interested in the same data. This helps optimize performance and reduce network traffic.
+
+Dynamic User Interfaces: With reactive programming, you can dynamically update the user interface based on changes in the tracking data. For example, as the package moves through various stages of the delivery process, the UI can automatically update to reflect the current status, location, and estimated arrival time.
+
+Concurrency and Parallelism: Tracking applications might need to handle multiple packages simultaneously. Reactive programming libraries provide tools to manage concurrency and parallelism efficiently. You can control how data streams are processed, combined, and coordinated to ensure smooth and responsive user experiences.
+
+In summary, a courier packet tracking application using an Airway Bill number could greatly benefit from reactive programming concepts and observables. These concepts enable you to handle real-time updates, asynchronous data sources, user interactions, errors, caching, and dynamic UI updates in a more organized and streamlined manner.
+
+
+
+
+
