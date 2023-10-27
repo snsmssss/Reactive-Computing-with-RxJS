@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/dist/esm5/internal/observable/of.js\");\n/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/dist/esm5/internal/operators/map.js\");\n\n\n(0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)(function (x) {\n  return x * x;\n})((0,rxjs__WEBPACK_IMPORTED_MODULE_1__.of)(6, 15, 24, 40)).subscribe(function (v) {\n  return console.log(\"Output is: \".concat(v));\n});\n\n//# sourceURL=webpack://rxjsproj/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/dist/esm5/internal/observable/of.js\");\n/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/dist/esm5/internal/operators/map.js\");\n\n\n(0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)(function (x) {\n  return x * x;\n})((0,rxjs__WEBPACK_IMPORTED_MODULE_1__.of)(20, 6, 24, 40)).subscribe(function (v) {\n  return console.log(\"Output is: \".concat(v));\n});\n\n//# sourceURL=webpack://rxjsproj/./src/index.js?");
 
 /***/ }),
 
